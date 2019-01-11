@@ -69,22 +69,6 @@ export default class Accept extends React.Component {
       uploaded: false
     });
 
-    // dataArr.forEach((form) => {
-    //   axios({
-    //     method: 'post',
-    //     url: 'https://api.imgur.com/3/image',
-    //     headers: {Authorization: "Client-ID 3f9b22888755abe"},
-    //     data: form
-    //   })
-    //   .then(function(response) {
-    //     console.log(response);
-    //     that.props.getLink(response.data.data.link);
-    //   })
-    //   .catch(function(err) {
-    //     console.log(err);
-    //   })
-    // })
-
     Promise.map(dataArr, form => {
       return axios({
         method: "post",
